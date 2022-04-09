@@ -32,6 +32,10 @@ Route::get('lien-he',[
     'as'=>'lienhe',
     'uses'=>'PageController@getLienHe'
 ]);
+Route::get('gioi-thieu',[
+    'as'=>'gioithieu',
+    'uses'=>'PageController@getGT'
+]);
 /***********/
 Route::get('add-to-cart/{id}',[
     'as'=>'themgiohang',

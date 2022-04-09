@@ -44,6 +44,10 @@ class PageController extends Controller
     {
         return view('page.lienhe');
     }
+    public function getGT()
+    {
+        return view('page.gioithieu');
+    }
       public function getAddtoCart(Request $req,$id){
         $product = Product::find($id);
         $oldCart = Session('cart')?Session::get('cart'):null;

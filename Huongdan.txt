@@ -1,0 +1,4 @@
+Nguyen Dam Duy Tan ha 
+Nhớ cài composer
+Chọn vào cây thư mục -> cmd -> ra bảng cmd -> php artisan serve
+Để khởi tạo loacalhost ảo xài loacalhost trên xampp ko dc đâu ha
