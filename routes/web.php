@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\DanhmucController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ThongkeController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('index',[
+
+Route::get('/',[
     'as'=>'trang-chu',
     'uses'=>'PageController@getIndex'
 ]);
@@ -83,3 +86,10 @@ Route::get('search',[
     'as'=>'search',
     'uses'=>'PageController@getSearch'
 ]);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/danhmuc', DanhmucController::class);
+Route::resource('/khachhang', UserController::class);
+Route::resource('/donhang', OrderController::class);
+Route::resource('/thongke', ThongkeController::class);
